@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For Consolata ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Background Music -->
+<audio id="bg-music" src="music.mp3" autoplay loop></audio>
+
+<!-- Floating Hearts Background -->
+<div class="hearts"></div>
+
+<!-- Intro Screen -->
+<div id="intro-screen">
+    <div class="poem-box">
+        <h1>For My Love, Consolata ❤️</h1>
+        <p id="poem-text"></p>
+        <button id="enter-btn">Enter</button>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div id="main-content">
+    <header>For My Love, Consolata ❤️</header>
+
+    <div class="container">
+        <h2>Hello, my love. Ask me anything 🥰</h2>
+
+        <div id="chatbox"></div>
+
+        <div class="input-area">
+            <input id="question" placeholder="Ask something...">
+            <button id="mic-btn">🎤</button>
+            <button id="ask-btn">Send</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+

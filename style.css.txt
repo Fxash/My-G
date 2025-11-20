@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Great+Vibes&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Great Vibes', cursive;
+    background: linear-gradient(135deg, #ffb6c1, #ff69b4, #ff1493);
+    background-size: 400% 400%;
+    animation: bgMove 12s infinite alternate;
+    color: #4a0033;
+    overflow: hidden;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Floating hearts */
+.hearts::before, .hearts::after {
+    content: ❤️ 💖 💕 ❣️ 💘";
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 25px;
+    animation: floatHearts 6s linear infinite;
+}
+
+@keyframes floatHearts {
+    0% { top: 100%; opacity: 1; }
+    100% { top: -10%; opacity: 0; }
+}
+
+/* Watermark */
+body::after {
+    content: "C & A";
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 250px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.10);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Intro Screen */
+#intro-screen {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(255, 240, 245, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.poem-box {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 35px;
+    border-radius: 25px;
+    width: 85%;
+    max-width: 650px;
+    text-align: center;
+    box-shadow: 0 0 25px pink;
+    animation: glow 3s infinite ease-in-out;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 25px #ff69b4; }
+    50% { box-shadow: 0 0 40px #ff1493; }
+    100% { box-shadow: 0 0 25px #ff69b4; }
+}
+
+#poem-text {
+    font-size: 22px;
+    line-height: 1.5;
+    font-family: 'Parisienne', cursive;
+    white-space: pre-line;
+    display: inline-block;
+}
+
+#enter-btn {
+    margin-top: 20px;
+    padding: 14px 28px;
+    background: #ff1493;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#enter-btn:hover {
+    background: #ff007f;
+}
+
+/* Main Content */
+#main-content {
+    display: none;
+}
+
+header {
+    background: rgba(255,20,147,0.85);
+    padding: 30px;
+    text-align: center;
+    color: white;
+    font-size: 35px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.93);
+    padding: 25px;
+    border-radius: 15px;
+}
+
+#chatbox {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ffa6c9;
+    border-radius: 10px;
+    padding: 15px;
+    overflow-y: auto;
+    background: #fff5f9;
+    margin-bottom: 15px;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+#question {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ff99c2;
+    border-radius: 8px;
+}
+
+#ask-btn, #mic-btn {
+    padding: 10px 20px;
+    background: #ff1493;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#ask-btn:hover, #mic-btn:hover {
+    background: #ff007f;
+}
+
+.msg { padding: 8px 12px; margin: 5px 0; border-radius: 10px; max-width: 80%; }
+.user { background: #ffe3ee; align-self: flex-end; }
+.bot  { background: #ffb6d9; }
